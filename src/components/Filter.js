@@ -1,20 +1,34 @@
-import React from "react";
-import AutoCompleteResults from "./AutoCompleteResults";
+import React from 'react'
+import AutoCompleteResults from './AutoCompleteResults'
 import '../App.scss'
 
-const Filter = ({ handleNewSearch, autocomplete, showAutocomplete, handleFocusOff, handleFocusOn, sendCoordinates }) => { 
+const Filter = ({
+  handleNewSearch,
+  autocomplete,
+  showAutocomplete,
+  handleFocusOff,
+  handleFocusOn,
+  sendCoordinates,
+}) => {
+  return (
+    <div className='searchBar'>
+      <input
+        onChange={handleNewSearch}
+        onFocus={handleFocusOn}
+        onBlur={handleFocusOff}
+        placeholder='Search Location'
+      />
 
-    return (
-        <div className="searchBar">
-            <input onChange={handleNewSearch} onFocus={handleFocusOn} onBlur={handleFocusOff} placeholder="Enter location..."/>
-    
-            {showAutocomplete ? 
-            <AutoCompleteResults autocomplete={autocomplete} sendCoordinates={sendCoordinates}/>
-            : <></>
-            }
-        </div>
-    )
+      {showAutocomplete ? (
+        <AutoCompleteResults
+          autocomplete={autocomplete}
+          sendCoordinates={sendCoordinates}
+        />
+      ) : (
+        <></>
+      )}
+    </div>
+  )
 }
 
-export default Filter;
-
+export default Filter
