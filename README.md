@@ -2,7 +2,7 @@
 
 Project built with React and SCSS utilising API services from OpenWeatherMap and Google.
 - Live Demo: [here](http://weather-app-2355.herokuapp.com/)
-
+- back-end: https://github.com/kamiljochym/weatherApp-backend
 
 
 ## APIs
